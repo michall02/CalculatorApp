@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     //varables to hold the operands and type of calculation
     private var operand1: Double? = null
-    private var operand2: Double? = 0.0
+    private var operand2: Double = 0.0
     private var pendingOperation = "="
 
 
@@ -82,7 +82,29 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun performOperation(value: String, operation: String) {
-        displayOpereation.text = operation
+        if(operand1 == null){
+            operand1 = value.toDouble()
+        }else{
+            operand2 = value.toDouble()
+
+            if(pendingOperation == "="){
+                pendingOperation = operation
+            }
+
+            when(pendingOperation){
+                "=" -> operand1 = operand2
+                "/" -> if (operand2 == 0.0){
+                        operand1 = Double.NaN //divide by zero
+                    }else{
+                        operand1 = operand1!! / operand2
+                    }
+                "*" -> operand1 = operand1!! * operand2
+                "-" -> operand1 = operand1!! - operand2
+                "+" -> operand1 = operand1!! + operand2
+            }
+        }
+        result.setText(operand1.toString())
+        newNumber.setText("")
     }
 
 
