@@ -5,6 +5,10 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
+import android.view.ViewGroup
+import android.widget.EditText
+
+
 
 private const val STATE_PENDING_OPERATION = "PendingOperation"
 private const val STATE_OPERAND1 = "Operand1"
@@ -55,6 +59,8 @@ class MainActivity : AppCompatActivity() {
         buttonMultiply.setOnClickListener(opListener)
         buttonMinus.setOnClickListener(opListener)
         buttonPlus.setOnClickListener(opListener)
+        buttonSqr.setOnClickListener(opListener)
+        buttonRoot.setOnClickListener(opListener)
 
         // negative button
         buttonNeg.setOnClickListener {
@@ -71,6 +77,22 @@ class MainActivity : AppCompatActivity() {
                 }catch (e:NumberFormatException){
                     newNumber.setText("")
                 }
+            }
+        }
+
+        //delete button
+        buttonDel.setOnClickListener{
+            val value = newNumber.text.toString()
+            val res = result.text.toString()
+
+            if(value.isNotEmpty()){
+                newNumber.setText("")
+            }else if (value.isEmpty() && res.isNotEmpty()){
+                newNumber.setText("")
+                result.setText("")
+                operand1 = null
+                pendingOperation = ""
+                operation.text = pendingOperation
             }
         }
 
@@ -99,7 +121,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun performOperation(value: Double, operation: String) {
         if (operand1 == null) {
-            operand1 = value
+            if(pendingOperation == "sqr"){
+                operand1 = Math.pow(value,2.0)
+            }else if (pendingOperation == "root"){
+                operand1 = Math.sqrt(value)
+            }else{
+                operand1 = value
+            }
         } else {
             if (pendingOperation == "=") {
                 pendingOperation = operation
@@ -115,6 +143,8 @@ class MainActivity : AppCompatActivity() {
                 "*" -> operand1 = operand1!! * value
                 "-" -> operand1 = operand1!! - value
                 "+" -> operand1 = operand1!! + value
+                "sqr" -> operand1 = Math.pow(value,2.0)
+                "root" -> operand1 = Math.sqrt(value)
             }
         }
         result.setText(operand1.toString())

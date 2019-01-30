@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button0"
-            android:minWidth="48dp"
+            android:minWidth="54dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/buttonDot"
             app:layout_constraintStart_toStartOf="@+id/button1"/>
     <Button
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button1"
-            android:minWidth="48dp"
+            android:minWidth="54dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/button2"
             app:layout_constraintStart_toStartOf="@+id/button4"/>
     <Button
@@ -52,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button2"
-            android:minWidth="48dp"
+            android:minWidth="54dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/button3"
             app:layout_constraintStart_toStartOf="@+id/button5"/>
     <Button
@@ -60,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button3"
-            android:minWidth="48dp" android:layout_marginTop="8dp"
+            android:minWidth="54dp" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/button6"
             app:layout_constraintStart_toStartOf="@+id/button6"/>
     <Button
@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button4"
-            android:minWidth="48dp"
+            android:minWidth="54dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/button5"
             app:layout_constraintStart_toStartOf="@+id/button7"/>
     <Button
@@ -76,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button5"
-            android:minWidth="48dp"
+            android:minWidth="54dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/button6"
             app:layout_constraintStart_toStartOf="@+id/button8"/>
     <Button
@@ -84,7 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button6"
-            android:minWidth="48dp" android:layout_marginTop="8dp"
+            android:minWidth="54dp" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/button9"
             app:layout_constraintStart_toStartOf="@+id/button9"/>
     <Button
@@ -92,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button7"
-            android:minWidth="48dp"
+            android:minWidth="54dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/button8" app:layout_constraintEnd_toStartOf="@+id/button8"
             android:layout_marginEnd="8dp"/>
     <Button
@@ -100,7 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button8"
-            android:minWidth="48dp"
+            android:minWidth="54dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/button9" app:layout_constraintEnd_toStartOf="@+id/button9"
             android:layout_marginEnd="8dp"/>
     <Button
@@ -108,7 +108,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button9"
-            android:minWidth="48dp" android:layout_marginTop="8dp"
+            android:minWidth="54dp" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/newNumber" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
     <Button
@@ -116,7 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/buttonDivide"
-            android:minWidth="48dp"
+            android:minWidth="54dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/button9" app:layout_constraintStart_toEndOf="@+id/button9"
             android:layout_marginStart="8dp"/>
     <Button
@@ -124,7 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/buttonDel"
-            android:minWidth="48dp"
+            android:minWidth="54dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/buttonDivide"
             app:layout_constraintStart_toEndOf="@+id/buttonDivide" android:layout_marginStart="8dp"/>
     <Button
@@ -132,7 +132,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/buttonMultiply"
-            android:minWidth="48dp"
+            android:minWidth="54dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/button6"
             app:layout_constraintStart_toStartOf="@+id/buttonDivide"/>
     <Button
@@ -140,15 +140,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/buttonNeg"
-            android:minWidth="48dp"
+            android:minWidth="54dp"
             android:textSize="12sp" app:layout_constraintBaseline_toBaselineOf="@+id/buttonMultiply"
             app:layout_constraintStart_toStartOf="@+id/buttonDel"/>
+    <Button
+            android:text="sqr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonSqr"
+            android:minWidth="54dp"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/buttonNeg"
+            app:layout_constraintBaseline_toBaselineOf="@+id/buttonMinus"/>
+    <Button
+            android:text="root"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonRoot"
+            android:minWidth="54dp"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/buttonSqr"
+            app:layout_constraintBaseline_toBaselineOf="@+id/buttonPlus"/>
     <Button
             android:text="+"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/buttonPlus"
-            android:minWidth="48dp"
+            android:minWidth="54dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/buttonEquals"
             app:layout_constraintStart_toStartOf="@+id/buttonMinus"/>
     <Button
@@ -156,7 +174,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/buttonMinus"
-            android:minWidth="48dp"
+            android:minWidth="54dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/button3"
             app:layout_constraintStart_toStartOf="@+id/buttonMultiply"/>
     <Button
@@ -164,7 +182,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/buttonDot"
-            android:minWidth="48dp"
+            android:minWidth="54dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/buttonEquals"
             app:layout_constraintStart_toStartOf="@+id/button2"/>
     <Button
@@ -172,7 +190,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/buttonEquals"
-            android:minWidth="48dp" android:layout_marginTop="8dp"
+            android:minWidth="54dp" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/button3"
             app:layout_constraintStart_toStartOf="@+id/button3"/>
 </android.support.constraint.ConstraintLayout>
